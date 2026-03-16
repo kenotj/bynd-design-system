@@ -1,0 +1,12 @@
+export { default as imgCinematicPortrait } from "../../assets/ba241924eb3e9c5a3a73c320c98fc2df8d6f00e1.png";
+export { default as imgEditorialLifestyle } from "../../assets/b2a862d901541dd84a53babaa8460f6294c6fe81.png";
+export { default as imgSoftLighting } from "../../assets/e180b89449d251ce832610d7a5e4de6558b7e539.png";
+export { default as imgMinimalInterior } from "../../assets/4ccb7750c12e55b2d9186db17d406d253058c071.png";
+export { default as imgSoftNaturalTones } from "../../assets/9ebbe98f68dcf4220d2df971602b77852191eae7.png";
+export { default as imgCinematic916 } from "../../assets/bea012db1bffd60f20b1cabc8055b2962ae8e610.png";
+export { default as imgIntelligentTypography } from "../../assets/aee9a5d9dbac66767cc7117b04c4e962ad950bdc.png";
+export { default as imgUnderstatedDigital } from "../../assets/e1d4f6a97fad7e2f4e3a8e8f5076029eee163036.png";
+export { default as imgCalmWorkspace } from "../../assets/de455b01e85e4071aba17d03d8e27b2f9ec7a990.png";
+export { default as imgPremiumWhitespace } from "../../assets/c0b760664f3966948f50b3a446ef5def24cc3e55.png";
+export { default as imgOliveSageAccent } from "../../assets/499d883173a483a7f9afea885461f34bf4da2e98.png";
+export { default as imgWarmBronze } from "../../assets/71452b020062b7108322c11b05d0df1fa6ac9e6b.png";
