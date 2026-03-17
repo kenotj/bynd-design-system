@@ -191,6 +191,12 @@ export default function App() {
               </li>
             ))}
           </ul>
+          
+          <div className="mt-4 pb-12">
+            <p className="font-sans text-[10px] uppercase tracking-widest text-[#D9D1C5] leading-relaxed text-center">
+              BYND Socials<br/>V1.0 — 2026
+            </p>
+          </div>
         </div>
       </div>
     </div>
