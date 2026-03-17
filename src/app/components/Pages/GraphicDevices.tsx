@@ -4,18 +4,18 @@ import { CornerUpLeft, CornerDownRight, Activity } from 'lucide-react';
 
 export function GraphicDevices() {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-12 py-32 max-w-5xl mx-auto relative overflow-hidden">
+    <div className="flex flex-col justify-center min-h-screen px-6 md:px-12 py-20 md:py-32 max-w-5xl mx-auto relative overflow-hidden">
       {/* Background Graphic Devices */}
-      <div className="absolute top-12 left-12 w-4 h-4 border-t border-l border-[#D9D1C5] opacity-50" />
-      <div className="absolute top-12 right-12 w-4 h-4 border-t border-r border-[#D9D1C5] opacity-50" />
-      <div className="absolute bottom-12 left-12 w-4 h-4 border-b border-l border-[#D9D1C5] opacity-50" />
-      <div className="absolute bottom-12 right-12 w-4 h-4 border-b border-r border-[#D9D1C5] opacity-50" />
+      <div className="absolute top-12 left-12 w-4 h-4 border-t border-l border-[#D9D1C5] opacity-50 hidden sm:block" />
+      <div className="absolute top-12 right-12 w-4 h-4 border-t border-r border-[#D9D1C5] opacity-50 hidden sm:block" />
+      <div className="absolute bottom-12 left-12 w-4 h-4 border-b border-l border-[#D9D1C5] opacity-50 hidden sm:block" />
+      <div className="absolute bottom-12 right-12 w-4 h-4 border-b border-r border-[#D9D1C5] opacity-50 hidden sm:block" />
       
-      <FadeIn className="mb-24 relative z-10">
-        <h2 className="font-serif text-5xl md:text-6xl text-[#1f1d1a] mb-8 leading-[1.1] max-w-4xl tracking-tight">
+      <FadeIn className="mb-16 md:mb-24 relative z-10">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1f1d1a] mb-6 md:mb-8 leading-[1.1] max-w-4xl tracking-tight">
           Graphic Devices
         </h2>
-        <p className="font-sans text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
+        <p className="font-sans text-lg md:text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
           We use functional, recurring graphic devices to guide the eye and segment content without adding decorative noise. These subtle framing elements provide structural support to our layout.
         </p>
       </FadeIn>
@@ -23,7 +23,7 @@ export function GraphicDevices() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8 relative z-10">
         {/* Thin Dividers */}
         <FadeIn delay={0.2} className="flex flex-col gap-6">
-          <div className="aspect-square bg-white border border-[#D9D1C5] rounded-3xl flex flex-col justify-center p-8 relative">
+          <div className="aspect-square bg-white border border-[#D9D1C5] rounded-3xl flex flex-col justify-center p-6 md:p-8 relative">
             <span className="font-sans text-[10px] uppercase tracking-widest text-[#8b8478] mb-8 block">01 / Divider</span>
             <div className="w-full h-px bg-[#D9D1C5] my-auto" />
             <div className="mt-8">
@@ -37,7 +37,7 @@ export function GraphicDevices() {
 
         {/* Corner Markers */}
         <FadeIn delay={0.4} className="flex flex-col gap-6">
-          <div className="aspect-square bg-[#F5F1E8] border border-[#D9D1C5] border-opacity-50 rounded-3xl flex flex-col justify-center p-8 relative">
+          <div className="aspect-square bg-[#F5F1E8] border border-[#D9D1C5] border-opacity-50 rounded-3xl flex flex-col justify-center p-6 md:p-8 relative">
             <span className="font-sans text-[10px] uppercase tracking-widest text-[#8b8478] mb-8 block">02 / Marker</span>
             <div className="relative w-full h-full flex items-center justify-center">
               <div className="absolute top-0 left-0 w-3 h-3 border-t border-l border-[#8b8478]" />
@@ -57,7 +57,7 @@ export function GraphicDevices() {
 
         {/* Framing Lines */}
         <FadeIn delay={0.6} className="flex flex-col gap-6">
-          <div className="aspect-square bg-[#1F1D1A] rounded-3xl flex flex-col justify-center p-8 relative">
+          <div className="aspect-square bg-[#1F1D1A] rounded-3xl flex flex-col justify-center p-6 md:p-8 relative">
             <span className="font-sans text-[10px] uppercase tracking-widest text-[#8b8478] mb-8 block">03 / Frame</span>
             <div className="w-full h-full border border-[#D9D1C5] border-opacity-20 flex items-center justify-center p-4">
                <div className="w-full h-full border border-dashed border-[#D9D1C5] border-opacity-10 flex items-center justify-center">
@@ -75,10 +75,10 @@ export function GraphicDevices() {
       </div>
 
       {/* Philosophy Section */}
-      <FadeIn delay={0.8} className="mt-24 bg-white p-12 md:p-16 border border-[#D9D1C5] rounded-3xl flex flex-col md:flex-row gap-12 items-center relative z-10">
-        <div className="flex-1 space-y-6">
+      <FadeIn delay={0.8} className="mt-16 md:mt-24 bg-white p-8 md:p-12 lg:p-16 border border-[#D9D1C5] rounded-3xl flex flex-col md:flex-row gap-12 items-center relative z-10">
+        <div className="flex-1 space-y-4 md:space-y-6">
           <h3 className="font-serif text-3xl md:text-4xl text-[#1f1d1a]">Support, Never Decorate</h3>
-          <p className="font-sans text-[16px] text-[#8b8478] leading-relaxed max-w-lg">
+          <p className="font-sans text-[15px] md:text-[16px] text-[#8b8478] leading-relaxed max-w-lg">
             Our graphic devices are quiet. They guide the user's eye and delineate space. If an element isn't actively communicating hierarchy or structure, it is decorative noise and should be removed.
           </p>
         </div>

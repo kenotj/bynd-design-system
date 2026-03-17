@@ -5,15 +5,15 @@ import { ByndLogo, ByndBrandmark } from "../Logo";
 
 export function PitchDeckSystem() {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-12 py-32 max-w-5xl mx-auto">
-      <FadeIn className="mb-24">
-        <div className="inline-block px-4 py-1 rounded-full border border-[#6F7B5E] text-[#6F7B5E] text-[11px] font-medium tracking-widest uppercase mb-6">
+    <div className="flex flex-col justify-center min-h-screen px-6 md:px-12 py-20 md:py-32 max-w-5xl mx-auto">
+      <FadeIn className="mb-16 md:mb-24">
+        <div className="inline-block px-4 py-1 rounded-full border border-[#6F7B5E] text-[#6F7B5E] text-[11px] font-medium tracking-widest uppercase mb-4 md:mb-6">
           Application 02
         </div>
-        <h2 className="font-serif text-5xl md:text-6xl text-[#1f1d1a] mb-8 leading-[1.1] max-w-4xl tracking-tight">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1f1d1a] mb-6 md:mb-8 leading-[1.1] max-w-4xl tracking-tight">
           Pitch Deck System
         </h2>
-        <p className="font-sans text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
+        <p className="font-sans text-lg md:text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
           Client presentations should feel like editorial
           magazines. Wide margins, strictly structured grids,
           and a deliberate rhythm between text-heavy slides and
@@ -21,7 +21,7 @@ export function PitchDeckSystem() {
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-x-12 md:gap-y-16">
         {/* Cover Slide */}
         <FadeIn delay={0.2} className="flex flex-col gap-4">
           <h3 className="font-sans text-[11px] tracking-widest uppercase text-[#8b8478]">
@@ -37,10 +37,10 @@ export function PitchDeckSystem() {
               </span>
             </div>
             <div>
-              <h4 className="font-serif text-[#1F1D1A] max-w-[80%] leading-[1.1] mb-4 text-[32px]">
+              <h4 className="font-serif text-[#1F1D1A] max-w-[80%] leading-[1.1] mb-2 md:mb-4 text-2xl md:text-[32px]">
                 Social Architecture for the Modern Luxury Brand
               </h4>
-              <p className="font-sans text-[12px] text-[#8b8478] max-w-[60%]">
+              <p className="font-sans text-[10px] md:text-[12px] text-[#8b8478] max-w-[80%] md:max-w-[60%]">
                 Prepared for Aura Botanicals. Oct 2026.
               </p>
             </div>
@@ -63,11 +63,11 @@ export function PitchDeckSystem() {
                 </span>
               </div>
               <div className="flex flex-col">
-                <span className="font-sans text-[24px] text-[#8b8478] font-light mb-4 leading-none">
+                <span className="font-sans text-xl md:text-[24px] text-[#8b8478] font-light mb-2 md:mb-4 leading-none">
                   02
                 </span>
-                <div className="w-full h-px bg-[#D9D1C5] mb-4" />
-                <h4 className="font-serif text-5xl text-[#1F1D1A] leading-[1.1]">
+                <div className="w-full h-px bg-[#D9D1C5] mb-2 md:mb-4" />
+                <h4 className="font-serif text-3xl md:text-5xl text-[#1F1D1A] leading-[1.1]">
                   Creative
                   <br />
                   Direction
@@ -85,15 +85,15 @@ export function PitchDeckSystem() {
           <div className="relative w-full aspect-[16/9]">
             <div className="absolute inset-0 bg-[#FBF9F4] border border-[#D9D1C5] flex overflow-hidden">
               <div className="flex-1 flex flex-col justify-between p-8 min-w-0 border-r border-[#D9D1C5]">
-                <div className="pt-4">
-                  <span className="font-sans text-[10px] uppercase tracking-widest text-[#8b8478] mb-4 block">
+                <div className="pt-2 md:pt-4">
+                  <span className="font-sans text-[8px] md:text-[10px] uppercase tracking-widest text-[#8b8478] mb-2 md:mb-4 block">
                     Concept 01
                   </span>
-                  <div className="w-8 h-px bg-[#D9D1C5] mb-6" />
-                  <h4 className="font-serif text-[#1F1D1A] mb-4 leading-[1.1] tracking-tight text-[24px]">
+                  <div className="w-8 h-px bg-[#D9D1C5] mb-4 md:mb-6" />
+                  <h4 className="font-serif text-[#1F1D1A] mb-2 md:mb-4 leading-[1.1] tracking-tight text-xl md:text-[24px]">
                     The Morning Ritual
                   </h4>
-                  <p className="font-sans text-[#8b8478] leading-relaxed max-w-[90%] text-[8px]">
+                  <p className="font-sans text-[#8b8478] leading-relaxed max-w-full md:max-w-[90%] text-[10px] md:text-[8px]">
                     A slow-paced, atmospheric reel focusing on
                     texture, natural light, and ambient sound
                     design. No voiceover, just the authentic

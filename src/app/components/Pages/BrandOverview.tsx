@@ -33,9 +33,9 @@ const DONTS = [
 
 export function BrandOverview() {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-12 py-32 max-w-5xl mx-auto">
-      <FadeIn className="mb-24">
-        <h2 className="font-serif text-5xl md:text-6xl text-[#1f1d1a] mb-10 leading-[1.1] max-w-4xl tracking-tight">
+    <div className="flex flex-col justify-center min-h-screen px-6 md:px-12 py-20 md:py-32 max-w-5xl mx-auto">
+      <FadeIn className="mb-16 md:mb-24">
+        <h2 className="font-serif text-4xl md:text-6xl text-[#1f1d1a] mb-8 md:mb-10 leading-[1.1] max-w-4xl tracking-tight">
           A creative content agency. We are a calm, refined, and
           human creative partner. Approachable, sophisticated,
           and quietly confident.
@@ -52,7 +52,7 @@ export function BrandOverview() {
         </div>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mx-[0px] mt-[0px] mb-[96px]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-16 mx-0 mt-0 mb-12 md:mb-[96px]">
         <FadeIn
           delay={0.2}
           className="aspect-[4/3] rounded-3xl overflow-hidden bg-[#F5F1E8]"
@@ -77,7 +77,7 @@ export function BrandOverview() {
 
       <FadeIn
         delay={0.2}
-        className="grid grid-cols-1 md:grid-cols-2 gap-16 bg-[#F5F1E8] p-12 md:p-16 rounded-3xl border border-[#D9D1C5] border-opacity-50"
+        className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 bg-[#F5F1E8] p-8 md:p-12 lg:p-16 rounded-3xl border border-[#D9D1C5] border-opacity-50"
       >
         <div>
           <div className="flex items-center gap-4 mb-8">

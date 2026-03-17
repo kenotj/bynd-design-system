@@ -9,13 +9,13 @@ export function CoverPage() {
   };
 
   return (
-    <div className="flex flex-col justify-center items-center min-h-screen px-12 py-24 w-full relative overflow-hidden bg-[#FBF9F4]">
+    <div className="flex flex-col justify-center items-center min-h-screen px-6 md:px-12 py-16 md:py-24 w-full relative overflow-hidden bg-[#FBF9F4]">
       {/* Decorative large brandmark in background */}
       <motion.div 
         initial={{ opacity: 0, scale: 0.9 }}
         animate={{ opacity: 0.03, scale: 1 }}
         transition={{ duration: 2, ease: "easeOut" }}
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-[800px] h-[800px]"
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none w-[400px] h-[400px] md:w-[800px] md:h-[800px]"
       >
         <ByndBrandmark fill="#1F1D1A" />
       </motion.div>
@@ -28,7 +28,7 @@ export function CoverPage() {
         </FadeIn>
         
         <FadeIn delay={0.3}>
-          <div className="w-[300px] md:w-[400px] mb-16">
+          <div className="w-[240px] md:w-[400px] mb-16">
             <ByndLogo fill="#1F1D1A" />
           </div>
         </FadeIn>
@@ -38,7 +38,7 @@ export function CoverPage() {
         </FadeIn>
         
         <FadeIn delay={0.7}>
-          <p className="font-serif text-3xl md:text-4xl text-[#1f1d1a] leading-relaxed italic max-w-2xl text-[#1f1d1a]/90">
+          <p className="font-serif text-2xl md:text-4xl text-[#1f1d1a]/90 leading-relaxed italic max-w-2xl px-4">
             "The interface is not the subject, but the frame. Every element serves the story."
           </p>
         </FadeIn>

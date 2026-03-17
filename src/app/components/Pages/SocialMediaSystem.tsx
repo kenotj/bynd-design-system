@@ -5,22 +5,22 @@ import { ByndLogo } from "../Logo";
 
 export function SocialMediaSystem() {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-12 py-32 max-w-5xl mx-auto">
-      <FadeIn className="mb-24">
-        <div className="inline-block px-4 py-1 rounded-full border border-[#6F7B5E] text-[#6F7B5E] text-[11px] font-medium tracking-widest uppercase mb-6">
+    <div className="flex flex-col justify-center min-h-screen px-6 md:px-12 py-20 md:py-32 max-w-5xl mx-auto">
+      <FadeIn className="mb-16 md:mb-24">
+        <div className="inline-block px-4 py-1 rounded-full border border-[#6F7B5E] text-[#6F7B5E] text-[11px] font-medium tracking-widest uppercase mb-4 md:mb-6">
           Application 01
         </div>
-        <h2 className="font-serif text-5xl md:text-6xl text-[#1f1d1a] mb-8 leading-[1.1] max-w-4xl tracking-tight">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1f1d1a] mb-6 md:mb-8 leading-[1.1] max-w-4xl tracking-tight">
           Social Media System
         </h2>
-        <p className="font-sans text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
+        <p className="font-sans text-lg md:text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
           The core output of BYND Socials. A structured but
           flexible framework for reel covers, carousels, and
           stories that feels cohesive and unmistakably premium.
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 md:mb-24">
         {/* Reel Covers */}
         <FadeIn delay={0.2} className="flex flex-col gap-8">
           <div>
@@ -121,7 +121,7 @@ export function SocialMediaSystem() {
               continuous lines.
             </p>
           </div>
-          <div className="w-full bg-[#F5F1E8] p-8 md:p-12 overflow-x-auto hide-scrollbar border border-[#D9D1C5]">
+          <div className="w-full bg-[#F5F1E8] p-6 md:p-12 overflow-x-auto overflow-y-hidden hide-scrollbar border border-[#D9D1C5]">
             <div className="flex gap-4 min-w-max">
               {[1, 2, 3, 4].map((slide) => (
                 <div

@@ -4,15 +4,15 @@ import { ByndLogo } from "../Logo";
 
 export function DoDont() {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-12 py-32 max-w-5xl mx-auto">
-      <FadeIn className="mb-24">
-        <div className="inline-block px-4 py-1 rounded-full border border-[#6F7B5E] text-[#6F7B5E] text-[11px] font-medium tracking-widest uppercase mb-6">
+    <div className="flex flex-col justify-center min-h-screen px-6 md:px-12 py-20 md:py-32 max-w-5xl mx-auto">
+      <FadeIn className="mb-16 md:mb-24">
+        <div className="inline-block px-4 py-1 rounded-full border border-[#6F7B5E] text-[#6F7B5E] text-[11px] font-medium tracking-widest uppercase mb-4 md:mb-6">
           Guidelines
         </div>
-        <h2 className="font-serif text-5xl md:text-6xl text-[#1f1d1a] mb-8 leading-[1.1] max-w-4xl tracking-tight">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1f1d1a] mb-6 md:mb-8 leading-[1.1] max-w-4xl tracking-tight">
           Do / Don't
         </h2>
-        <p className="font-sans text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
+        <p className="font-sans text-lg md:text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
           Rules for preserving the integrity of the BYND Socials
           brand. The difference between premium and generic
           often comes down to spacing, restraint, and avoiding
@@ -20,11 +20,11 @@ export function DoDont() {
         </p>
       </FadeIn>
 
-      <div className="space-y-24">
+      <div className="space-y-16 md:space-y-24">
         {/* Logo Misuse */}
         <FadeIn delay={0.2}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#F5F1E8] p-12 flex flex-col items-center justify-center border-t-4 border-[#6F7B5E] relative">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="bg-[#F5F1E8] p-8 md:p-12 flex flex-col items-center justify-center border-t-4 border-[#6F7B5E] relative">
               <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-[#6F7B5E]">
                 Do
               </div>
@@ -37,7 +37,7 @@ export function DoDont() {
               </p>
             </div>
 
-            <div className="bg-[#F5F1E8] p-12 flex flex-col items-center justify-center border-t-4 border-[#C84B31] relative">
+            <div className="bg-[#F5F1E8] p-8 md:p-12 flex flex-col items-center justify-center border-t-4 border-[#C84B31] relative">
               <div className="absolute top-4 left-4 bg-white px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-[#C84B31]">
                 Don't
               </div>
@@ -54,8 +54,8 @@ export function DoDont() {
 
         {/* Typography */}
         <FadeIn delay={0.3}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#FBF9F4] p-12 border border-[#D9D1C5] border-t-4 border-t-[#6F7B5E] relative flex flex-col justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="bg-[#FBF9F4] p-8 md:p-12 border border-[#D9D1C5] border-t-4 border-t-[#6F7B5E] relative flex flex-col justify-center">
               <div className="absolute top-4 left-4 bg-white border border-[#D9D1C5] px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-[#6F7B5E]">
                 Do
               </div>
@@ -71,7 +71,7 @@ export function DoDont() {
               </p>
             </div>
 
-            <div className="bg-[#FBF9F4] p-12 border border-[#D9D1C5] border-t-4 border-t-[#C84B31] relative flex flex-col justify-center">
+            <div className="bg-[#FBF9F4] p-8 md:p-12 border border-[#D9D1C5] border-t-4 border-t-[#C84B31] relative flex flex-col justify-center">
               <div className="absolute top-4 left-4 bg-white border border-[#D9D1C5] px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-[#C84B31]">
                 Don't
               </div>
@@ -89,8 +89,8 @@ export function DoDont() {
 
         {/* Cluttered Layouts */}
         <FadeIn delay={0.4}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#1F1D1A] p-12 border-t-4 border-[#6F7B5E] relative flex items-center justify-center">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="bg-[#1F1D1A] p-8 md:p-12 border-t-4 border-[#6F7B5E] relative flex items-center justify-center">
               <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-white">
                 Do
               </div>
@@ -102,7 +102,7 @@ export function DoDont() {
               </p>
             </div>
 
-            <div className="bg-[#1F1D1A] p-12 border-t-4 border-[#C84B31] relative flex items-center justify-center">
+            <div className="bg-[#1F1D1A] p-8 md:p-12 border-t-4 border-[#C84B31] relative flex items-center justify-center">
               <div className="absolute top-4 left-4 bg-white/10 backdrop-blur-md px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-[#ff8a75]">
                 Don't
               </div>
@@ -123,8 +123,8 @@ export function DoDont() {
 
         {/* Excessive Glassmorphism */}
         <FadeIn delay={0.5}>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="bg-[#D9D1C5] p-12 border-t-4 border-[#6F7B5E] relative flex items-center justify-center overflow-hidden">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+            <div className="bg-[#D9D1C5] p-8 md:p-12 border-t-4 border-[#6F7B5E] relative flex items-center justify-center overflow-hidden min-h-[300px]">
               <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1602128110234-2d11c0aaadfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc3MzE0MjM4M3ww&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center mix-blend-multiply"></div>
               <div className="absolute top-4 left-4 bg-white/80 px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-[#6F7B5E] z-10">
                 Do
@@ -137,7 +137,7 @@ export function DoDont() {
               </div>
             </div>
 
-            <div className="bg-[#D9D1C5] p-12 border-t-4 border-[#C84B31] relative flex items-center justify-center overflow-hidden">
+            <div className="bg-[#D9D1C5] p-8 md:p-12 border-t-4 border-[#C84B31] relative flex items-center justify-center overflow-hidden min-h-[300px]">
               <div className="absolute inset-0 opacity-20 bg-[url('https://images.unsplash.com/photo-1602128110234-2d11c0aaadfe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYXJjaGl0ZWN0dXJlfGVufDF8fHx8MTc3MzE0MjM4M3ww&ixlib=rb-4.1.0&q=80&w=1080')] bg-cover bg-center mix-blend-multiply"></div>
               <div className="absolute top-4 left-4 bg-white/80 px-3 py-1 rounded-full text-[10px] font-sans font-medium uppercase tracking-widest text-[#C84B31] z-10">
                 Don't

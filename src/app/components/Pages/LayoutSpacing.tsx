@@ -3,17 +3,17 @@ import { FadeIn } from '../FadeIn';
 
 export function LayoutSpacing() {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-12 py-32 max-w-5xl mx-auto">
-      <FadeIn className="mb-24">
-        <h2 className="font-serif text-5xl md:text-6xl text-[#1f1d1a] mb-8 leading-[1.1] max-w-4xl tracking-tight">
+    <div className="flex flex-col justify-center min-h-screen px-6 md:px-12 py-20 md:py-32 max-w-5xl mx-auto">
+      <FadeIn className="mb-16 md:mb-24">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1f1d1a] mb-6 md:mb-8 leading-[1.1] max-w-4xl tracking-tight">
           Layout & Spacing
         </h2>
-        <p className="font-sans text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
+        <p className="font-sans text-lg md:text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
           Our layout approach relies on spacious margins, modular grids, and visual-first hierarchy. We use negative space deliberately to let our content breathe and maintain a refined, editorial presence.
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-12 lg:gap-16">
         <FadeIn delay={0.2} className="flex flex-col gap-6">
           <div className="aspect-[4/3] bg-[#F5F1E8] rounded-3xl border border-[#D9D1C5] border-opacity-50 flex items-center justify-center p-8 relative overflow-hidden">
             {/* Grid visualization */}
@@ -53,10 +53,10 @@ export function LayoutSpacing() {
         </FadeIn>
       </div>
 
-      <FadeIn delay={0.6} className="mt-24 bg-[#1F1D1A] rounded-3xl p-12 md:p-16 flex flex-col md:flex-row gap-12 items-center">
-        <div className="flex-1 space-y-6">
+      <FadeIn delay={0.6} className="mt-16 md:mt-24 bg-[#1F1D1A] rounded-3xl p-8 md:p-12 lg:p-16 flex flex-col md:flex-row gap-12 items-center">
+        <div className="flex-1 space-y-4 md:space-y-6">
           <h3 className="font-serif text-3xl md:text-4xl text-[#FBF9F4]">Visual-First Hierarchy</h3>
-          <p className="font-sans text-[16px] text-[#D9D1C5] leading-relaxed max-w-lg">
+          <p className="font-sans text-[15px] md:text-[16px] text-[#D9D1C5] leading-relaxed max-w-lg">
             Imagery always leads. Typography supports. We never overcrowd the frame with copy, allowing the visual story to dominate the first impression. Secondary details should recede gracefully.
           </p>
         </div>

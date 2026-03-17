@@ -5,25 +5,25 @@ import { ImageWithFallback } from '../figma/ImageWithFallback';
 
 export function GlassmorphismRules() {
   return (
-    <div className="flex flex-col justify-center min-h-screen px-12 py-32 max-w-5xl mx-auto">
-      <FadeIn className="mb-24">
-        <h2 className="font-serif text-5xl md:text-6xl text-[#1f1d1a] mb-8 leading-[1.1] max-w-4xl tracking-tight">
+    <div className="flex flex-col justify-center min-h-screen px-6 md:px-12 py-20 md:py-32 max-w-5xl mx-auto">
+      <FadeIn className="mb-16 md:mb-24">
+        <h2 className="font-serif text-4xl md:text-5xl lg:text-6xl text-[#1f1d1a] mb-6 md:mb-8 leading-[1.1] max-w-4xl tracking-tight">
           Glassmorphism Rules
         </h2>
-        <p className="font-sans text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
+        <p className="font-sans text-lg md:text-[20px] leading-relaxed text-[#8b8478] font-light max-w-3xl">
           We use glassmorphism sparingly to create delicate digital overlays. It is never decorative—it exists to ensure legibility while maintaining context of the content beneath. Our execution is strictly controlled.
         </p>
       </FadeIn>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-16 mb-24">
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 mb-16 md:mb-24">
         {/* The Rule */}
         <FadeIn delay={0.2} className="flex flex-col gap-6">
-          <div className="aspect-[4/3] rounded-3xl overflow-hidden relative group flex items-center justify-center p-8">
+          <div className="aspect-[4/3] rounded-3xl overflow-hidden relative group flex items-center justify-center p-6 md:p-8">
             <ImageWithFallback src="https://images.unsplash.com/photo-1550505193-8646b96b3490?q=80&w=2940&auto=format&fit=crop" alt="Abstract gradient background" className="absolute inset-0 w-full h-full object-cover grayscale opacity-60 mix-blend-multiply transition-transform duration-700 group-hover:scale-105" />
             
             {/* The Overlay */}
-            <div className="relative z-10 w-80 h-[180px] p-6 rounded-2xl border border-[#D9D1C5]/30 bg-white/40 backdrop-blur-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.05)] flex flex-col justify-between">
-              <span className="font-sans text-[10px] uppercase tracking-widest text-[#8B8478] mb-4 block">System Overlay</span>
+            <div className="relative z-10 w-[90%] max-w-[320px] h-[180px] p-5 md:p-6 rounded-2xl border border-[#D9D1C5]/30 bg-white/40 backdrop-blur-[12px] shadow-[0_8px_32px_rgba(0,0,0,0.05)] flex flex-col justify-between">
+              <span className="font-sans text-[10px] uppercase tracking-widest text-[#8B8478] mb-3 md:mb-4 block">System Overlay</span>
               <div>
                 <h3 className="font-serif text-xl md:text-2xl text-[#1F1D1A] mb-2 leading-tight">Delicate Blur & Opacity</h3>
                 <p className="font-sans text-[13px] md:text-[14px] text-[#8B8478] leading-relaxed max-w-sm">
@@ -42,12 +42,12 @@ export function GlassmorphismRules() {
 
         {/* The Application */}
         <FadeIn delay={0.4} className="flex flex-col gap-6">
-          <div className="aspect-[4/3] bg-[#F5F1E8] rounded-3xl border border-[#D9D1C5] border-opacity-50 p-8 flex items-center justify-center relative overflow-hidden">
+          <div className="aspect-[4/3] bg-[#F5F1E8] rounded-3xl border border-[#D9D1C5] border-opacity-50 p-6 md:p-8 flex items-center justify-center relative overflow-hidden">
             {/* Mock UI Background Elements */}
             <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-[#A57A4C] opacity-20 rounded-full blur-2xl"></div>
             <div className="absolute bottom-1/4 right-1/4 w-40 h-40 bg-[#6F7B5E] opacity-20 rounded-full blur-3xl"></div>
             
-            <div className="relative z-10 w-80 h-[180px] p-6 bg-white/40 backdrop-blur-md border border-[#D9D1C5]/30 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] flex flex-col justify-between">
+            <div className="relative z-10 w-[90%] max-w-[320px] h-[180px] p-5 md:p-6 bg-white/40 backdrop-blur-md border border-[#D9D1C5]/30 rounded-2xl shadow-[0_8px_32px_rgba(0,0,0,0.05)] flex flex-col justify-between">
               <div className="w-10 h-10 rounded-full bg-[#6F7B5E]/30 mb-6 border border-[#6F7B5E]/10"></div>
               <div className="w-3/4 h-2 bg-[#1F1D1A]/10 rounded-full mb-3"></div>
               <div className="w-1/2 h-2 bg-[#1F1D1A]/5 rounded-full"></div>
@@ -64,8 +64,8 @@ export function GlassmorphismRules() {
 
       {/* Do's and Don'ts */}
       <FadeIn delay={0.6}>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="p-8 md:p-12 bg-white border border-[#D9D1C5] rounded-3xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+          <div className="p-6 md:p-12 bg-white border border-[#D9D1C5] rounded-3xl">
             <div className="flex items-center gap-3 mb-6">
               <CheckCircle2 className="text-[#6F7B5E]" size={24} />
               <h3 className="font-serif text-2xl text-[#1f1d1a]">Do</h3>
@@ -86,7 +86,7 @@ export function GlassmorphismRules() {
             </ul>
           </div>
           
-          <div className="p-8 md:p-12 bg-[#F5F1E8] border border-[#D9D1C5] rounded-3xl">
+          <div className="p-6 md:p-12 bg-[#F5F1E8] border border-[#D9D1C5] rounded-3xl">
             <div className="flex items-center gap-3 mb-6">
               <XCircle className="text-[#A57A4C]" size={24} />
               <h3 className="font-serif text-2xl text-[#1f1d1a]">Don't</h3>

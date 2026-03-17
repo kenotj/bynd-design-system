@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { CoverPage } from './components/Pages/CoverPage';
 import { BrandOverview } from './components/Pages/BrandOverview';
 import { BrandPrinciples } from './components/Pages/BrandPrinciples';
@@ -33,11 +33,28 @@ const PAGES = [
 
 export default function App() {
   const [activeSection, setActiveSection] = useState('cover');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isHeaderVisible, setIsHeaderVisible] = useState(true);
+  const lastScrollY = useRef(0);
 
   useEffect(() => {
     const handleScroll = () => {
+      // Scroll direction logic
+      const currentScrollY = window.scrollY;
+      if (currentScrollY < 50) {
+        setIsHeaderVisible(true);
+      } else if (currentScrollY > lastScrollY.current) {
+        // Scrolling down
+        setIsHeaderVisible(false);
+      } else {
+        // Scrolling up
+        setIsHeaderVisible(true);
+      }
+      lastScrollY.current = currentScrollY;
+
+      // Active section logic
       const sections = PAGES.map(p => document.getElementById(p.id));
-      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      const scrollPosition = currentScrollY + window.innerHeight / 3;
 
       let currentSection = PAGES[0].id;
       for (const section of sections) {
@@ -48,7 +65,7 @@ export default function App() {
       setActiveSection(currentSection);
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -108,16 +125,73 @@ export default function App() {
         ))}
       </main>
 
-      {/* Mobile progress bar instead of sidebar */}
-      <div className="fixed top-0 left-0 right-0 h-1 bg-[#F5F1E8] z-50 lg:hidden">
-        <motion.div 
-          className="h-full bg-[#6F7B5E]"
-          initial={{ width: '0%' }}
-          animate={{ 
-            width: `${((PAGES.findIndex(p => p.id === activeSection) + 1) / PAGES.length) * 100}%` 
-          }}
-          transition={{ duration: 0.3 }}
-        />
+      {/* Mobile Header (Scroll-Reactive) */}
+      <header 
+        className={`fixed top-0 left-0 right-0 z-40 bg-[#FBF9F4]/95 backdrop-blur-md border-b border-[#D9D1C5]/30 lg:hidden transition-transform duration-300 ${
+          isHeaderVisible ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <div className="flex items-center justify-between px-6 py-4">
+          <div className="w-8 cursor-pointer" onClick={() => scrollTo('cover')}>
+            <ByndBrandmark fill="#1F1D1A" />
+          </div>
+          <button 
+            onClick={() => setIsMenuOpen(true)}
+            className="text-[#1F1D1A] font-sans text-xs uppercase tracking-widest font-medium"
+          >
+            Menu
+          </button>
+        </div>
+        {/* Mobile progress bar integrated into header */}
+        <div className="absolute bottom-0 left-0 right-0 h-[2px] bg-[#F5F1E8]">
+          <motion.div 
+            className="h-full bg-[#6F7B5E]"
+            initial={{ width: '0%' }}
+            animate={{ 
+              width: `${((PAGES.findIndex(p => p.id === activeSection) + 1) / PAGES.length) * 100}%` 
+            }}
+            transition={{ duration: 0.3 }}
+          />
+        </div>
+      </header>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 z-50 bg-[#FBF9F4] flex flex-col transition-transform duration-500 ease-in-out lg:hidden ${
+          isMenuOpen ? 'translate-y-0' : '-translate-y-full'
+        }`}
+      >
+        <div className="flex items-center justify-between px-6 py-4 border-b border-[#D9D1C5]/30">
+          <div className="w-8 cursor-pointer" onClick={() => { scrollTo('cover'); setIsMenuOpen(false); }}>
+            <ByndBrandmark fill="#1F1D1A" />
+          </div>
+          <button 
+            onClick={() => setIsMenuOpen(false)}
+            className="text-[#1F1D1A] font-sans text-xs uppercase tracking-widest font-medium"
+          >
+            Close
+          </button>
+        </div>
+        
+        <div className="flex-1 overflow-y-auto flex flex-col items-center">
+          <ul className="space-y-8 w-full max-w-sm py-12">
+            {PAGES.map((page, index) => (
+              <li key={page.id}>
+                <button
+                  onClick={() => { scrollTo(page.id); setIsMenuOpen(false); }}
+                  className={`text-center items-center justify-center transition-all duration-300 flex flex-col gap-2 w-full group ${
+                    activeSection === page.id ? 'text-[#1F1D1A]' : 'text-[#8b8478] hover:text-[#1F1D1A]'
+                  }`}
+                >
+                  <span className={`font-sans text-[10px] tracking-widest uppercase ${activeSection === page.id ? 'text-[#6F7B5E]' : 'text-[#D9D1C5] group-hover:text-[#8b8478]'}`}>
+                    {index + 1 < 10 ? `0${index + 1}` : index + 1}
+                  </span>
+                  <span className="font-serif text-2xl md:text-3xl">{page.title}</span>
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </div>
   );
